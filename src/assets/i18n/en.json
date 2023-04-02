@@ -1,0 +1,11 @@
+{
+  "welcome": "Hello there",
+  "navigation": {
+    "auth": "Authentication",
+    "login": "Login"
+  },
+  "error": {
+    "internalServerError": "There seems to be a server issue. Please try again.",
+    "notFoundError": "This page cannot be found."
+  }
+}

@@ -1,0 +1,29 @@
+<div class="flex flex-row justify-around items-center space-x-0.5">
+  <div>
+    <button
+      class="flex"
+      mat-icon-button
+      [matMenuTriggerFor]="langMenu"
+    >
+      <mat-icon svgIcon="mat_outline:language"></mat-icon>
+    </button>
+    <mat-menu #langMenu="matMenu">
+      <button mat-menu-item (click)="setActiveLang('hr')">
+        <mat-icon class="pt-1" svgIcon="hr_flag"></mat-icon>
+        <span>HR</span>
+      </button>
+      <button mat-menu-item (click)="setActiveLang('en')">
+        <mat-icon class="pt-1" svgIcon="en_flag"></mat-icon>
+        <span>EN</span>
+      </button>
+    </mat-menu>
+  </div>
+
+  <button
+    class="flex"
+    mat-icon-button
+    (click)="logout()"
+  >
+    <mat-icon svgIcon="heroicons_outline:user-circle"></mat-icon>
+  </button>
+</div>

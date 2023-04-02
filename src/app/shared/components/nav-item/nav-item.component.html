@@ -1,0 +1,37 @@
+<div *ngIf="isItemCollapsable(); else basic">
+  <div *transloco="let t; read: 'navigation'">
+    <button
+      class="flex flex-row justify-between items-center"
+      mat-flat-button
+      [matMenuTriggerFor]="appMenu"
+      [matMenuTriggerData]="item"
+    >
+      <mat-icon svgIcon="heroicons_outline:{{ item.icon }}"></mat-icon>
+      <b class="text-base ml-1">{{ t(item.id!) }}</b>
+    </button>
+
+    <mat-menu #appMenu="matMenu" xPosition="after">
+      <ng-template matMenuContent let-children="children">
+        <div *ngFor="let child of children">
+          <button mat-menu-item (click)="navigateTo(child.link!)">
+            <mat-icon svgIcon="heroicons_outline:{{ child.icon }}"></mat-icon>
+            <span>{{ t(child.id) }}</span>
+          </button>
+        </div>
+      </ng-template>
+    </mat-menu>
+  </div>
+</div>
+
+<ng-template #basic>
+  <div *transloco="let t; read: 'navigation'">
+    <button
+      class="flex flex-row justify-start items-center"
+      mat-flat-button
+      (click)="navigateTo(item.link!)"
+    >
+        <mat-icon svgIcon="heroicons_outline:{{ item.icon }}"></mat-icon>
+        <b class="text-base ml-1">{{ t(item.id!) }}</b>
+    </button>
+  </div>
+</ng-template>

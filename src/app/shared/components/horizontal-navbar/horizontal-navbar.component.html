@@ -1,0 +1,24 @@
+<div class="flex flex-row justify-between items-center w-full h-16 sm:h-20 p-4 shadow-md">
+
+  <!-- left side -> logo and nav items -->
+  <div class="flex flex-row justify-between items-center space-x-2">
+
+    <!-- logo -->
+    <div>
+      <img src="../../../../favicon.ico" class="w-7" />
+    </div>
+
+    <!-- navitems -->
+    <div class="flex flex-auto flex-row shrink justify-around items-center space-x-2">
+      <nav-item
+        *ngFor="let navigationItem of navigationConfig"
+        [item]="navigationItem">
+      </nav-item>
+    </div>
+
+  </div>
+
+  <!-- right side -> language and profile button -->
+  <nav-utility-item></nav-utility-item>
+
+</div>

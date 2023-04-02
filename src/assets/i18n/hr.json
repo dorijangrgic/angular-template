@@ -1,0 +1,11 @@
+{
+  "welcome": "Zdravo tamo",
+  "navigation": {
+    "auth": "Autentikacija",
+    "login": "Prijava"
+  },
+  "error": {
+    "internalServerError": "Čini se da je došlo do pogreške od strane poslužitelja. Molimo pokušajte ponovno.",
+    "notFoundError": "Stranicu nije moguće pronaći."
+  }
+}
