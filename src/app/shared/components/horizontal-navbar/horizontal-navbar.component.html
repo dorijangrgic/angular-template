@@ -4,13 +4,14 @@
   <div class="flex flex-row justify-between items-center space-x-2">
 
     <!-- logo -->
-    <div>
+    <div class="p-2">
       <img src="../../../../favicon.ico" class="w-7" />
     </div>
 
     <!-- navitems -->
     <div class="flex flex-auto flex-row shrink justify-around items-center space-x-2">
       <nav-item
+      class="p-1"
         *ngFor="let navigationItem of navigationConfig"
         [item]="navigationItem">
       </nav-item>
